@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Text Classification Inventy</title>
+</head>
+<body style="margin: 0; padding: 0; line-height: 2.5;">
+        <nav class="navbar navbar-light bg-light">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#">
+                    <img src="logo.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                   <strong> Roux Afrique</strong>
+                  </a>
+                  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <img src="unverified.svg">Comment ça marche ?
+                      </button>
+                </div>
+        </nav>
+
+        
+
+        <div class="card text-center">
+          <h1 style="margin : 20px">Automatisez votre inventaire!</h1>
+          <div class="card-body">
+            <h5 class="card-title">Importer un fichier excel</h5>
+            
+            <div class="alert alert-secondary" role="alert">
+              Remarque : le fichier doit obligatoirement avoir une colonne "Designation"
+            </div>
+            <form action="/classify", method="POST">
+              <input type="file", name="upload", value="">
+              <input type="submit" name="submit" class="btn btn-primary" value="Classifié">
+          </form>
+          <a class="btn btn-primary" style="margin : 50px" href="{{ url_for('download_excel') }}">télécharger le nouveau excel</a>
+          </div>
+         
+        </div>
+              
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Comment ça marche ?</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      Afin de simplifier les processus et d’automatiser les actions pour gagner en efficacité sur le traitement des dossiers, ROUX Afrique Network vous permet d'automatiser votre inventaire et faciliter la tâche pour les experts avec cette application basé sur l'intelligence artificielle. <br>
+                      Cette application permet de classifier les équipements industriels selon leurs désignations en quelques étapes simples :
+                      <li><strong>Importer un fichier excel qui comporte la colonne de Designation</strong></li>
+                      <li><strong>Appliquer le classifieur ML en cliquant sur le bouton classifié</strong></li>
+                      <li><strong>Téléchargez votre nouveau fichier excel et voila!</strong></li>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Je comprend!</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+</body>
+</html>
