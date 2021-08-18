@@ -7,16 +7,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>Text Classification Inventy</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+      body{
+        font-family: 'Quicksand', sans-serif;
+      }
+      .imge{
+        background-image: url("excel.png");
+      }
+    </style>
 </head>
-<body style="margin: 0; padding: 0; line-height: 2.5;">
+<body style="margin: 0; padding: 0; line-height: 2.1;">
         <nav class="navbar navbar-light bg-light">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="#">
-                    <img src="logo.jpg" alt="" width="30" height="24" class="d-inline-block align-text-top">
                    <strong> Roux Afrique</strong>
                   </a>
                   <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    <img src="unverified.svg">Comment ça marche ?
+                    Comment ça marche ?
                       </button>
                 </div>
         </nav>
@@ -24,7 +32,7 @@
         
 
         <div class="card text-center">
-          <h1 style="margin : 20px">Automatisez votre inventaire!</h1>
+          <h1 style="margin : 20px"> <strong>Automatisez votre inventaire!</strong></h1>
           <div class="card-body">
             <h5 class="card-title">Importer un fichier excel</h5>
             
@@ -37,7 +45,7 @@
           </form>
           <a class="btn btn-primary" style="margin : 50px" href="{{ url_for('download_excel') }}">télécharger le nouveau excel</a>
           </div>
-         
+        
         </div>
               
               <!-- Modal -->
@@ -61,6 +69,7 @@
                   </div>
                 </div>
               </div>
+              <div class="imge"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
 </body>
 </html>
